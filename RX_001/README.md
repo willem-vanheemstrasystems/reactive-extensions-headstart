@@ -168,11 +168,8 @@ function() {
 		}
 	];
 
-	// ------------ INSERT CODE HERE! -----------------------------------
-	// Use map function to accumulate {id, title} pairs from each video.
-	return newReleases.map // finish this expression!
-	// ------------ INSERT CODE HERE! -----------------------------------
-
+	// Use map function to accumulate {id, title} pairs from each video.	
+	return newReleases.map(function(newRelease) { return { id: newRelease.id, title: newRelease.title }; });
 }
 ```
 
