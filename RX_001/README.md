@@ -119,7 +119,7 @@ To make projections easier, let's add a ***map()*** function to the Array type. 
 Array.prototype.map = function(projectionFunction) {
   var results = [];
   this.forEach(function(itemInArray) {
-    results.push(itemInArray + 1);
+    results.push(projectionFunction(itemInArray));
   });
   return results;
 };
