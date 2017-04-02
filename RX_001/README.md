@@ -96,13 +96,34 @@ function() {
 	],
 	videoAndTitlePairs = [];
 
- newReleases.forEach(function(newRelease) {
-   videoAndTitlePairs.push({"id": newRelease.id, "title": newRelease.title});
- });
+	newReleases.forEach(function(newRelease) {
+	  videoAndTitlePairs.push({"id": newRelease.id, "title": newRelease.title});
+	});
 
 	return videoAndTitlePairs;
 }
 ```
 
+All array projections share two operations in common:
 
+1. Traverse the source array
+2. Add each item's projected value to a new array
+
+Why not abstract away how these operations are carried out?
+
+Exercise 4: Implement map()
+
+To make projections easier, let's add a ***map()*** function to the Array type. Map accepts the projection function to be applied to each item in the source array, and returns the projected array.
+
+```javascript
+Array.prototype.map = function(projectionFunction) {
+  var results = [];
+  this.forEach(function(itemInArray) {
+    results.push(itemInArray + 1);
+  });
+  return results;
+};
+
+// JSON.stringify([1,2,3].map(function(x) { return x + 1; })) // map function returns [2,3,4]
+```
 
