@@ -24,16 +24,30 @@ This section will follow a pattern. First we'll solve problems the way you proba
 
 ### Traversing an Array
 
-Exercise 1: Print all the names in an array
+Exercise 1:  Use ***for*** to print all the names in an array
 
 ```javascript
 function(console) {
-	var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"],
-		counter;
+  var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"],
+  counter;
 
-	for(counter = 0; counter < names.length; counter++) {
-		console.log(names[counter]);
-	}
+  for(counter = 0; counter < names.length; counter++) {
+    console.log(names[counter]);
+  }
 }
 ```
+
+Exercise 2: Use ***forEach*** to print all the names in an array
+
+```javascript
+function(console) {
+  var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"];
+
+  names.forEach(function(name) {
+    console.log(name);
+  });
+}
+```
+
+
 
