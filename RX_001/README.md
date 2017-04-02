@@ -173,3 +173,5 @@ function() {
 }
 ```
 
+Notice that map allows us to specify what projection we want to apply to an array, but hides how the operation is carried out.
+
